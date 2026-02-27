@@ -174,6 +174,7 @@ While we know the **Population Parameters** (e.g., 50% will cancel), businesses 
 
 * **Stress Testing:** Because the **Sample Statistics** generated (Mean 172.04) are so close to our target **Population Parameters** (172), it proves the logic of our predictive model is sound.
 
+* **Defining Thresholds:** By simulating 1,000 batches, we find the "Probability of the Exceptional." This allows us to set **Operational Thresholds**—knowing exactly when a batch of results is a statistical fluke versus a systemic failure.
 ---
 
 ## 🎓 Project Credits
