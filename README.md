@@ -22,7 +22,7 @@ Static data tells you what *happened*; simulations tell you what *could happen*.
 
 * **Steps & Formula:**
 1. Generate a random seed using `=RAND()`.
-2. Apply logic: `=IF(A2 <= 0.7, "✅VALID", "❌INVALID")`.
+2. Apply logic: `=IF(A2 <= 0.7, "VALID", "INVALID")`.
 
 * *Why:* Because the RAND function is uniform, 70% of generated values will fall at or below 0.7.
 
@@ -40,13 +40,13 @@ Static data tells you what *happened*; simulations tell you what *could happen*.
 
 **Objective:** To forecast revenue and churn by simulating user decisions after a free trial without needing to interview every individual user.
 
-* **The Theory:** **Discrete Categorical Distribution.** This expands on binary logic to accommodate multiple fixed outcomes (Basic, Premium, or Cancel).
+* **The Theory:** **Discrete Categorical Distribution.** This expands on binary logic to accommodate multiple fixed outcomes (Basic, Premium, or Canceled).
 
 * **Logic & Intuition:** We divide the total probability (1.0) into three specific "buckets" based on market research. The random seed's landing spot determines the user's path.
 
 * **Steps & Formula:**
 1. Generate 100 samples using `=RANDARRAY(100)`.
-2. Apply nested logic: `=IFS(A2<=0.3, "Basic", A2<=0.5, "Premium", TRUE, "Cancel")`.
+2. Apply nested logic: `=IFS(A2<=0.3, "Basic", A2<=0.5, "Premium", A2>0.5, "Canceled")`.
 
 * *Why:* This maps the seeds to the specific market shares: 30% for Basic, 20% for Premium, and 50% for Cancel.
 
@@ -56,7 +56,9 @@ Static data tells you what *happened*; simulations tell you what *could happen*.
 
 * **The Result:** The 100-user simulation produced a breakdown of approximately **50% Cancellations, 20% Premium, and 30% Basic.**
 
-* **Strategic Insight:** Small samples (n=10) showed high volatility, while n=100 provided stable results. **Recommendation:** Operations should focus on the "Basic" tier (30%) as the primary target for retention campaigns to offset the 50% churn.
+* **Strategic Insight:** Small samples (n=10) showed high volatility, while n=100 provided stable results.
+
+* **Recommendation:** Operations should focus on the "Basic" tier (30%) as the primary target for retention campaigns to offset the 50% churn.
 
 ---
 
@@ -85,7 +87,9 @@ Static data tells you what *happened*; simulations tell you what *could happen*.
 | **Mean** | 172 | **172.048** |
 | **Standard Deviation** | 7.1 | **7.275** |
 
-* **Strategic Insight:** Despite a sample mean near 172cm, the simulation identified outliers at 192cm+. **Recommendation:** Inventory curation must include a 5% buffer for "extreme" sizes to accommodate the "tails" of the distribution.
+* **Strategic Insight:** Despite a sample mean near 172cm, the simulation identified outliers at 192cm+.
+
+* **Recommendation:** Inventory curation must include a 5% buffer for "extreme" sizes to accommodate the "tails" of the distribution.
 
 ---
 
