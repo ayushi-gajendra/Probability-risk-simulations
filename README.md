@@ -10,7 +10,7 @@
 
 ## 📌 Project Overview
 
-Static data tells you what *happened*; simulations tell you what *could happen*. This project demonstrates the use of **Monte Carlo Simulations**—a mathematical technique used to model risk and uncertainty. By using random sampling from known distributions, I developed three simulation models to forecast quality control triggers, subscription retention, and inventory requirements.
+**Static data** tells you **what *happened*;** **simulations** tell you **what *could happen*.** This project demonstrates the use of **Monte Carlo Simulations**—a mathematical technique used to model risk and uncertainty. By using random sampling from known distributions, I developed three simulation models to forecast quality control triggers, subscription retention, and inventory requirements.
 
 ---
 
@@ -18,7 +18,7 @@ Static data tells you what *happened*; simulations tell you what *could happen*.
 
 1. **Manufacturing Quality Control**: Simulating DNA test kit validity to avoid expensive process destruction.
 
-2. **Subscription Retention**: Predicting user behavior (Basic vs. Premium vs. Cancel) after a free trial.
+2. **Subscription Retention**: Predicting user behavior (Basic vs. Premium vs. Canceled) after a free trial.
 
 3. **Inventory Optimization**: Modeling population physical characteristics (height) to stock appropriate equipment sizes.
 
